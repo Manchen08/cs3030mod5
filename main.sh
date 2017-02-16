@@ -48,13 +48,19 @@ then
 	help
 fi
 
+if [[ $year != '2015' ]] && [[ $year != '2016' ]]
+then
+	echo "Year must be 2015 or 2016"
+	exit 1
+fi
+
 if [[ -z $email ]]
 then
 	echo "Require email"
 	help
 fi
 
-if [[ !-z $user ]] && [[ !-z $passwd ]]
+if [[ ! -z $user ]] && [[ ! -z $passwd ]]
 then 
 	echo "Pulling files with $user"
 else
@@ -105,3 +111,4 @@ echo "Process finished"
 
 
 exit 0
+
