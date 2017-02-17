@@ -60,12 +60,7 @@ then
 	help
 fi
 
-if [[ ! -z $user ]] && [[ ! -z $passwd ]]
-then 
-	echo "Pulling files with $user"
-else
-	echo "Pulling files with anonymous"
-fi
+bash getfiles.sh $year
 
 # check proper exit from pulling files
 if [[ $? == 1 ]]
@@ -91,8 +86,14 @@ then
 	exit 1
 fi
 
-
 # run FTP script
+if [[ ! -z $user ]] && [[ ! -z $passwd ]]
+then 
+	echo "Pulling files with $user"
+else
+	echo "Pulling files with anonymous"
+fi
+
 if [[ $? == 1 ]]
 then
 	echo "Error in FTP Script"
