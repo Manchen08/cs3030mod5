@@ -5,7 +5,8 @@ ts=`date +%Y_%m_%d_%H:%M`
 fileName="MOCK_DATA_FILTER_$ts"
 if [[ -z $1 ]]
 then
-	echo"fail"
+	echo"file was not entered"
+	exit 1
 else
 
     echo "File Name: $1"
@@ -15,6 +16,7 @@ else
 	if [[ $? -eq 1 ]]
 	then
 		echo "zip failed"
+		exit 1
 	else
 		echo "zip worked"
 	fi
