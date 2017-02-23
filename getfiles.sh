@@ -14,6 +14,7 @@
 #===============================================================================
 
 #set -o nounset                              # Treat unset variables as an error
+reg='MOCK_DATA_[0-9]{4}\.tar\.gz'
 
 if [[ -z $1 ]]
 then
@@ -21,9 +22,13 @@ then
 	exit 1
 fi
 
-echo "Getting file with year $1"
+if [[ $1 != '2015' ]] && [[ $1 != '2016' ]]
+then
+	echo "Year must be 2015 or 2016"
+	exit 1
+fi
 
-wget icarus.cs.weber.edu/~hvalle/cs3030/MOCK_DATA_$1.tar.gz
+wget -r -p --accept-regex=$reg icarus.cs.weber.edu/~hvalle/cs3030/
 
 if [[ $? == '1' ]]
 then

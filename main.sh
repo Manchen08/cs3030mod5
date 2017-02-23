@@ -48,12 +48,6 @@ then
 	help
 fi
 
-if [[ $year != '2015' ]] && [[ $year != '2016' ]]
-then
-	echo "Year must be 2015 or 2016"
-	exit 1
-fi
-
 if [[ -z $email ]]
 then
 	echo "Require email"
