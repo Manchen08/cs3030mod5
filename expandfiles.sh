@@ -20,7 +20,7 @@ cd temp
 echo "Beginning filtering process..."
 for i in 1 2 3 4 5 6 7 8 9 "10"
 do
-	cat MOCK_DATA$i.csv | ../filterdata.awk > ../FilteredData.txt
+	cat MOCK_DATA$i.csv | ../filterdata.awk >> ../FilteredData.txt
 done
 
 echo "Done. Filtered output can be found in FilteredData.txt"
