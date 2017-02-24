@@ -14,8 +14,8 @@ usage(){
 #Variables For anonymous log in
 #Note: for both log in there needs to be separate sets of log in creds
 #anonymous log in vars only change host
-anonHost="137.190.19.97"  #<----------add your host IP here
-regHost="137.190.19.97"  #<----------add your host IP here
+anonHost=""  #<----------add your host IP here
+regHost=""  #<----------add your host IP here
 aName="anonymous"
 aPass=""
 dir="MockData"
