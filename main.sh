@@ -17,7 +17,7 @@
 
 help()
 {
-	echo "Usage ./$0 -y YEAR -e EMAIL (o)-u USER (o)-p PASSWD"
+	echo "Usage $0 -y YEAR -e EMAIL (o)-u USER (o)-p PASSWD"
 	exit 1;
 }
 if [[ $1 == "--help" ]]
@@ -48,12 +48,6 @@ then
 	help
 fi
 
-if [[ $year != '2015' ]] && [[ $year != '2016' ]]
-then
-	echo "Year must be 2015 or 2016"
-	exit 1
-fi
-
 if [[ -z $email ]]
 then
 	echo "Require email"
@@ -70,7 +64,7 @@ then
 fi
 
 
-
+bash expandfiles.sh
 # run expandfiles script
 
 if [[ $? == 1 ]]
@@ -79,19 +73,27 @@ then
 	exit 1
 fi
 
-# call filterscript
+# call filterscript Currently being done in expandfiles
+#if [[ $? == 1 ]]
+#then
+#	echo "Error in filtering data"
+#	exit 1
+#fi
+
+bash compressfiles.sh "FilteredData.txt"
+# run compress
 if [[ $? == 1 ]]
 then
-	echo "Error in filtering data"
+	echo "Error in Compression"
 	exit 1
 fi
 
 # run FTP script
 if [[ ! -z $user ]] && [[ ! -z $passwd ]]
 then 
-	echo "Pulling files with $user"
+	echo "Pushing files with $user"
 else
-	echo "Pulling files with anonymous"
+	echo "Pushing files with anonymous"
 fi
 
 if [[ $? == 1 ]]
