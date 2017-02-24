@@ -6,22 +6,30 @@
 
 usage(){
 	echo "Invalid options"
-	echo "Usage ./$0 -f<file.zip> [-u<username>] [-p<passwd>]"
+	echo "Usage $0 -f<file.zip> [-u<username>] [-p<passwd>]"
 	echo "-f is the zipped file to ftp."
 	exit 1
 }
 
-#check for help arg
-host="137.190.19.97"
+#Variables For anonymous log in
+#Note: for both log in there needs to be separate sets of log in creds
+#anonymous log in vars only change host
+anonHost="137.190.19.97"  #<----------add your host IP here
+regHost="137.190.19.97"  #<----------add your host IP here
+aName="anonymous"
+aPass=""
+dir="MockData"
+log=./ftplog.log #log file to capture ftp status code
+FTP_GOOD="226 Transfer complete"
+
+
 if [[ $1 == "--help" ]]
 then
 	usage
 fi
 
-
-
-#looping for flags/ options -s -w -c
-while getopts ":f:u:p:" opt #once it finds it, it is stored in opt
+#get opts portion
+while getopts ":f:u:p:" opt 
 do 
 	case $opt in 
 		f) file=$OPTARG 
@@ -30,7 +38,7 @@ do
 			;;
 		p) pass=$OPTARG
 			;;
-		\?)#anything else is invalid option
+		\?)
 			usage
 			;;
 	esac
@@ -38,7 +46,7 @@ do
 
 done
 
-if [[ -z $file ]] #check if size is empty
+if [[ -z $file ]] #check dir is empty
 then
 	echo "File argument is required."
 	usage
@@ -47,22 +55,34 @@ fi
 if [[ -z $uName && -z $pass ]]
 then
 	echo "anon log in"
+	`
+	ftp -nv $anonHost <<END_SCRIPT > $log
+	quote USER $aName
+	quote PASS $aPass
+	cd $dir
+	put $file
+	quit
+	END_SCRIPT
+	`
 else
-	ftpCall=`ftp -n $host <<END_SCRIPT
+	echo "regular log in"
+	`
+	ftp -nv $regHost <<END_SCRIPT > $log
 	quote USER $uName
 	quote PASS $pass
 	put $file
 	quit
 	END_SCRIPT`
 fi
-
+`grep "$FTP_GOOD" $log`
 if [[ $? -eq 1 ]]
 then
 	echo "ftp failed"
 	exit 1
+else
+	echo "ftp worked"
 fi
-
-
+echo "Parameters"
 echo "[$file] [$uName] [$pass]"
 
 exit 0
