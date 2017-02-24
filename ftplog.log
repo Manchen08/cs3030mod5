@@ -1,10 +1,11 @@
-Connected to 137.190.19.97.
-220 Welcome to CS3550 VM.
+Connected to 137.190.19.104.
+220 Welcome to the jungle, won't you bring it to your sha-na-na-na-na-na-na-na-knees!
 331 Please specify the password.
 230 Login successful.
-local: MOCK_DATA_FILTER_2017_02_24_18:59.zip remote: MOCK_DATA_FILTER_2017_02_24_18:59.zip
+250 Directory successfully changed.
+local: FilteredData.txt remote: FilteredData.txt
 200 PORT command successful. Consider using PASV.
 150 Ok to send data.
 226 Transfer complete.
-168 bytes sent in 0.00 secs (5.9340 MB/s)
+234900 bytes sent in 0.01 secs (28.8126 MB/s)
 221 Goodbye.

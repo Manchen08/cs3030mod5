@@ -89,21 +89,16 @@ then
 fi
 
 # run FTP script
-if [[ ! -z $user ]] && [[ ! -z $passwd ]]
-then 
-	echo "Pushing files with $user"
-else
-	echo "Pushing files with anonymous"
-fi
+bash ftpfile.sh -f "FilteredData.txt" -u $user -p $passwd
 
 if [[ $? == 1 ]]
 then
-	echo "Error in FTP Script"
+	echo "FTP Error"
 	exit 1
 fi
 
-
 # run clean script
+bash cleanfiles.sh
 if [[ $? == 1 ]]
 then
 	echo "Error in cleaning temp files."

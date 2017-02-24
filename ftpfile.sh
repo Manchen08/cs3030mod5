@@ -14,8 +14,8 @@ usage(){
 #Variables For anonymous log in
 #Note: for both log in there needs to be separate sets of log in creds
 #anonymous log in vars only change host
-anonHost=""  #<----------add your host IP here
-regHost=""  #<----------add your host IP here
+anonHost="137.190.19.104"  #<----------add your host IP here
+regHost="137.190.19.104"  #<----------add your host IP here
 aName="anonymous"
 aPass=""
 dir="MockData"
@@ -52,7 +52,7 @@ then
 	usage
 fi
 
-if [[ -z $uName && -z $pass ]]
+if [[ -z $uName || -z $pass ]]
 then
 	echo "anon log in"
 	`
@@ -82,7 +82,7 @@ then
 else
 	echo "ftp worked"
 fi
-echo "Parameters"
-echo "[$file] [$uName] [$pass]"
+#echo "Parameters"
+#echo "[$file] [$uName] [$pass]"
 
 exit 0
