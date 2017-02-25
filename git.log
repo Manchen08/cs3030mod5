@@ -1,0 +1,141 @@
+commit fd2118cd4190ad93d005d146667399473ab9393b
+Author: Jon <jonathanwheeler8@gmail.com>
+Date:   Sat Feb 25 04:29:21 2017 +0000
+
+    I think this is everything.
+
+commit 452c75f369f7f7c39aa80fdd8eb6593bb05a869b
+Author: Daniel54 <danielrlavulo@gmail.com>
+Date:   Fri Feb 24 22:49:12 2017 +0000
+
+    Fixed: ftp warnings, Fixed: grep call
+
+commit 44b4cfddac9fdca609ab978e10b2b730bfeb8ff4
+Author: Jon <jonathanwheeler8@gmail.com>
+Date:   Fri Feb 24 22:18:54 2017 +0000
+
+    I think we're just about done.
+
+commit 7fbe3157d31bb994b1a9f0cd0b067df9ccafb698
+Author: Daniel54 <danielrlavulo@gmail.com>
+Date:   Fri Feb 24 20:08:07 2017 +0000
+
+    removed my IP host, will need to add your own for script to work, Placement of credentials are indicated with comments
+
+commit 2d4c41431a936d0529ff6522ed9a90a8395170e1
+Merge: c9f5f78 a4cafa1
+Author: Daniel54 <danielrlavulo@gmail.com>
+Date:   Fri Feb 24 20:02:26 2017 +0000
+
+    Merge branch 'master' of https://github.com/Manchen08/cs3030mod5
+    Merging branch to commit changes
+
+commit c9f5f7899968946cd4578ffff4b1ef590be709a4
+Author: Daniel54 <danielrlavulo@gmail.com>
+Date:   Fri Feb 24 19:56:03 2017 +0000
+
+    Added: anonymous log in functionality, Output ftp status message to log file, grep to check stuatus to return success code
+
+commit 707a4bfbcef8bf2ff75766a28701c868fa74cbda
+Author: Daniel54 <danielrlavulo@gmail.com>
+Date:   Fri Feb 24 19:21:31 2017 +0000
+
+    log file to capture ftp status codes
+
+commit a4cafa1eb44a0f8b4db7b1d68fc66cd385342af1
+Author: Jon Wheeler <jonathanwheeler1@weber.edu>
+Date:   Thu Feb 23 12:54:21 2017 -0700
+
+    Getfiles changed.
+
+commit 69d1f44188d00943f1c6c60107df2326206d7332
+Author: Jon <jonathanwheeler8@gmail.com>
+Date:   Thu Feb 23 19:29:05 2017 +0000
+
+    Edits for wget
+
+commit b4b0631eef3e95d3751e00460cc79ae074f77536
+Author: Daniel54 <danielrlavulo@gmail.com>
+Date:   Thu Feb 23 16:51:40 2017 +0000
+
+    Added in ftp regular log in functionality
+
+commit 5706710506ae734038941785eeabc83827b85738
+Author: Jon <jonathanwheeler8@gmail.com>
+Date:   Thu Feb 23 15:21:29 2017 +0000
+
+    Added scripts to main, small edits
+
+commit 93999370d41dbffd676313d50caf3c363836cef4
+Author: Chris Langna <chris.langan195@gmail.com>
+Date:   Wed Feb 22 16:47:47 2017 -0700
+
+    Got rid of filterdata.sh, it wasn't being used
+
+commit dce47476b1ded9ea61cc77e34690dfbe0c705e78
+Author: Chris Langna <chris.langan195@gmail.com>
+Date:   Wed Feb 22 16:46:20 2017 -0700
+
+    File expander and data filter done
+
+commit ace9a164f29a0509e8767c3dafde2478347c5e94
+Author: Daniel54 <danielrlavulo@gmail.com>
+Date:   Wed Feb 22 17:37:51 2017 +0000
+
+    Added exit codes on failed cases
+
+commit dfa9f1e2c0432d72d0b37e948953d1da6a286913
+Merge: 605ae29 0c0e5f4
+Author: Jon <jonathanwheeler8@gmail.com>
+Date:   Fri Feb 17 02:58:49 2017 +0000
+
+    Merge branch 'master' of https://github.com/Manchen08/cs3030mod5
+
+commit 605ae29ee1949a423c3ef15f4aa0c3441d90bc80
+Author: Jon <jonathanwheeler8@gmail.com>
+Date:   Fri Feb 17 02:58:14 2017 +0000
+
+    Finished my portion.
+
+commit 0c0e5f4235d7d28e6652915fe632207250c6ab5d
+Merge: 4fb57be 52d0be3
+Author: Daniel54 <danielrlavulo@gmail.com>
+Date:   Fri Feb 17 00:01:22 2017 +0000
+
+    Merge branch 'master' of https://github.com/Manchen08/cs3030mod5
+
+commit 4fb57beab9ede7802b4a14e2a989b3f3e6dc2bbc
+Author: Daniel54 <danielrlavulo@gmail.com>
+Date:   Thu Feb 16 23:59:40 2017 +0000
+
+    Added Compressing functionality
+
+commit 52d0be37ee7c11c562b6ed5d2fbfb8c58bbb2ab2
+Author: caydenallen <caydenallen@mail.weber.edu>
+Date:   Thu Feb 16 23:58:09 2017 +0000
+
+    updated cleanfiles
+
+commit fc8773fbe0b583a8b75a3b8cf62826a6cade1c24
+Author: Jon <jonathanwheeler8@gmail.com>
+Date:   Thu Feb 16 15:19:10 2017 +0000
+
+    Editing main file
+
+commit fe1c7c9133df23920162c3645976274e197333aa
+Author: Jon <jonathanwheeler8@gmail.com>
+Date:   Tue Feb 14 21:42:07 2017 +0000
+
+    Backbone of main file started
+
+commit 758094cb7386008ac75b052732efe2632a5b82cb
+Author: Jon Wheeler <jonathanwheeler1@weber.edu>
+Date:   Tue Feb 14 13:18:12 2017 -0700
+
+    Pushing files
+
+commit a612b68cc1bfc2107b3bdeb89151f4d91ed19ba1
+Author: Jon Wheeler <jonathanwheeler8@gmail.com>
+Date:   Tue Feb 14 12:48:27 2017 -0700
+
+    Initial commit
