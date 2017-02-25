@@ -88,8 +88,11 @@ then
 	exit 1
 fi
 
+ts=`date +%Y_%m_%d_%H:%M`
+fileName="MOCK_DATA_FILTER_$ts.zip"
+
 # run FTP script
-bash ftpfile.sh -f "FilteredData.txt" -u $user -p $passwd
+bash ftpfile.sh -f "$fileName" -u $user -p $passwd
 
 if [[ $? == 1 ]]
 then
@@ -105,7 +108,7 @@ then
 	exit 1
 fi
 
-echo "Process finished"
+echo "Succesfully transfered files to 137.190.19.104" | mail -s "Successful Transfer " $email echo "Process finished"
 
 
 exit 0

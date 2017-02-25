@@ -3,9 +3,9 @@ Connected to 137.190.19.104.
 331 Please specify the password.
 230 Login successful.
 250 Directory successfully changed.
-local: FilteredData.txt remote: FilteredData.txt
+local: MOCK_DATA_FILTER_2017_02_25_04:26.zip remote: MOCK_DATA_FILTER_2017_02_25_04:26.zip
 200 PORT command successful. Consider using PASV.
 150 Ok to send data.
 226 Transfer complete.
-234900 bytes sent in 0.01 secs (28.8126 MB/s)
+17020 bytes sent in 0.00 secs (22.3267 MB/s)
 221 Goodbye.

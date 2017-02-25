@@ -14,8 +14,8 @@ usage(){
 #Variables For anonymous log in
 #Note: for both log in there needs to be separate sets of log in creds
 #anonymous log in vars only change host
-anonHost=""  #<----------add your host IP here
-regHost=""  #<----------add your host IP here
+anonHost="137.190.19.104"  #<----------add your host IP here
+regHost="137.190.19.104"  #<----------add your host IP here
 aName="anonymous"
 aPass=""
 dir="MockData"
@@ -74,7 +74,7 @@ else
 END_SCRIPT
 fi
 grep "226 Transfer complete" $log
-if [[ $? -eq 1 ]]
+if [[ $? == "1" ]]
 then
 	echo "ftp failed"
 	exit 1
